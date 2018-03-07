@@ -18,6 +18,7 @@ Plug 'chriskempson/base16-vim'
 " Utils
 Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'kien/ctrlp.vim'
+Plug 'dzeban/vim-log-syntax'
 
 call plug#end()
 

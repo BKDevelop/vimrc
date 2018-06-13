@@ -36,7 +36,7 @@ syntax on
 filetype plugin indent on
 
 " Pick a leader key
-" let mapleader = ","
+let mapleader = "-"
 
 " Security
 set modelines=0
@@ -114,5 +114,5 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Color Scheme
-:set termguicolors
-:colorscheme darcula 
+set termguicolors
+colorscheme darcula 

@@ -19,9 +19,13 @@ Plug 'chriskempson/base16-vim'
 
 " Utils
 Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf.vim'
 Plug 'dzeban/vim-log-syntax'
 Plug 'blueshirts/darcula'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'valloric/youcompleteme'
+Plug 'tpope/vim-surround'
+Plug 'bling/vim-airline'
 
 call plug#end()
 

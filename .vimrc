@@ -4,6 +4,9 @@ set nocompatible
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
+" Pick a leader key
+let mapleader = "\<space>"
+
 " Load plugins here (PlugVim)
 
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -19,15 +22,19 @@ Plug 'chriskempson/base16-vim'
 
 " Utils
 Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
-Plug 'junegunn/fzf.vim'
 Plug 'dzeban/vim-log-syntax'
+Plug 'kien/ctrlp.vim'
 Plug 'blueshirts/darcula'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-surround'
-Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
+
+" Plugin specific key mappings:
+"   NERDTree
+nmap <leader>n :NERDTreeToggle<CR>
 
 " Turn on syntax highlighting
 syntax on
@@ -35,14 +42,14 @@ syntax on
 " For plugins to load correctly
 filetype plugin indent on
 
-" Pick a leader key
-let mapleader = "-"
+
 
 " Security
 set modelines=0
 
-" Show line numbers
+" Show line hybrid numbers
 set number
+set relativenumber
 
 " Show file stats
 set ruler

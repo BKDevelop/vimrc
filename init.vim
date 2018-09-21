@@ -1,26 +1,41 @@
 
-
-
-
 " Don't try to be vi compatible
 set nocompatible
 
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
+let g:python3_host_prog='C:/Python36/python.exe'
+" let g:python_host_prog='C:/Users/foo/Envs/neovim/Scripts/python.exe'
 
-" TODO: Load plugins here (pathogen or vundle)
+" Pick a leader key
+let mapleader = "\<space>"
+
+" Load plugins here (PlugVim)
+
 
 call plug#begin('~\AppData\Local\nvim\plugged')
 
 " Color Theme
-Plug 'chriskempson/base16-vim'
+Plug 'blueshirts/darcula'
+
+" Visuals
+Plug 'itchyny/lightline.vim'
 
 " Utils
 Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'kien/ctrlp.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'valloric/youcompleteme'
+Plug 'tpope/vim-surround'
+
+" Language Support
 Plug 'dzeban/vim-log-syntax'
 
 call plug#end()
+
+" Plugin specific key mappings:
+"   NERDTree
+nmap <leader>n :NERDTreeToggle<CR>
 
 " Turn on syntax highlighting
 syntax on
@@ -28,14 +43,14 @@ syntax on
 " For plugins to load correctly
 filetype plugin indent on
 
-" TODO: Pick a leader key
-" let mapleader = ","
+
 
 " Security
 set modelines=0
 
-" Show line numbers
+" Show line hybrid numbers
 set number
+set relativenumber
 
 " Show file stats
 set ruler
@@ -107,5 +122,5 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Color Scheme
-:set termguicolors
-:colorscheme base16-default-dark
+set termguicolors
+colorscheme darcula 

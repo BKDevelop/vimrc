@@ -25,11 +25,15 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'kien/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'valloric/youcompleteme'
+"Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-surround'
 
 " Language Support
 Plug 'dzeban/vim-log-syntax'
+Plug 'jceb/vim-orgmode' 
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -63,7 +67,8 @@ set encoding=utf-8
 
 " Whitespace
 set wrap
-set textwidth=79
+set textwidth=0
+set wrapmargin=0
 set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2

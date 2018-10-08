@@ -129,3 +129,6 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 " Color Scheme
 set termguicolors
 colorscheme darcula 
+
+" Cosum commands
+command Clean execute "%bd | e#"

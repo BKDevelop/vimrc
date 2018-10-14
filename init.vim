@@ -27,6 +27,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 "Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-surround'
+Plug 'mattn/emmet-vim'
 
 " Language Support
 Plug 'dzeban/vim-log-syntax'

@@ -8,27 +8,28 @@ filetype off
 let mapleader = "\<space>"
 
 " Load plugins here (PlugVim)
-
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
 call plug#begin('~/.vim/plugged')
 
 " Color Theme
-Plug 'chriskempson/base16-vim'
+Plug 'blueshirts/darcula'
+
+" Visuals
+Plug 'itchyny/lightline.vim'
 
 " Utils
 Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
-Plug 'dzeban/vim-log-syntax'
 Plug 'kien/ctrlp.vim'
-Plug 'blueshirts/darcula'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'valloric/youcompleteme'
+"Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-surround'
-Plug 'itchyny/lightline.vim'
+Plug 'mattn/emmet-vim'
+
+" Language Support
+Plug 'dzeban/vim-log-syntax'
+Plug 'jceb/vim-orgmode' 
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'scrooloose/nerdcommenter'
 
 call plug#end()
 
@@ -62,7 +63,8 @@ set encoding=utf-8
 
 " Whitespace
 set wrap
-set textwidth=79
+set textwidth=0
+set wrapmargin=0
 set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2
@@ -123,3 +125,6 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 " Color Scheme
 set termguicolors
 colorscheme darcula 
+
+" Cosum commands
+command Clean execute "%bd | e#"

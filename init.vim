@@ -4,7 +4,7 @@ set nocompatible
 
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
-let g:python3_host_prog='C:/Python36/python.exe'
+let g:python3_host_prog='C:/Python37/python.exe'
 " let g:python_host_prog='C:/Users/foo/Envs/neovim/Scripts/python.exe'
 
 " Pick a leader key
@@ -28,6 +28,7 @@ Plug 'terryma/vim-multiple-cursors'
 "Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
+Plug 'easymotion/vim-easymotion'
 
 " Language Support
 Plug 'dzeban/vim-log-syntax'
@@ -41,14 +42,15 @@ call plug#end()
 " Plugin specific key mappings:
 "   NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>nc :NERDTree C:\\<CR>
+nmap <leader>ne :NERDTree E:\\<CR>
+nmap <leader>fed :tabe C:\Users\koehlerb\AppData\Local\nvim\init.vim<CR>
 
 " Turn on syntax highlighting
 syntax on
 
 " For plugins to load correctly
 filetype plugin indent on
-
-
 
 " Security
 set modelines=0
@@ -131,5 +133,5 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 set termguicolors
 colorscheme darcula 
 
-" Cosum commands
+" Costum commands
 command Clean execute "%bd | e#"

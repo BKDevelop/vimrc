@@ -1,20 +1,26 @@
+
 " Don't try to be vi compatible
+"
 set nocompatible
 
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
+" let g:python_host_prog='C:/Users/foo/Envs/neovim/Scripts/python.exe'
 
 " Pick a leader key
 let mapleader = "\<space>"
 
 " Load plugins here (PlugVim)
-call plug#begin('~/.vim/plugged')
+
+
+call plug#begin('~/.config/nvim/plugged')
 
 " Color Theme
 Plug 'blueshirts/darcula'
 
 " Visuals
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Utils
 Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
@@ -23,6 +29,7 @@ Plug 'terryma/vim-multiple-cursors'
 "Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
+Plug 'easymotion/vim-easymotion'
 
 " Language Support
 Plug 'dzeban/vim-log-syntax'
@@ -36,14 +43,13 @@ call plug#end()
 " Plugin specific key mappings:
 "   NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>fed :tabe ~/.config/nvim/init.vim<CR>
 
 " Turn on syntax highlighting
 syntax on
 
 " For plugins to load correctly
 filetype plugin indent on
-
-
 
 " Security
 set modelines=0
@@ -89,6 +95,8 @@ set hidden
 set ttyfast
 
 " Status bar
+let g:airline_theme = 'deus'
+let g:airline_powerline_fonts = 1
 set laststatus=2
 
 " Last line
@@ -126,5 +134,8 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 set termguicolors
 colorscheme darcula 
 
-" Cosum commands
+" Costum commands
 command Clean execute "%bd | e#"
+
+map jk <ESC>
+map <leader>w <C-w>

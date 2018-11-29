@@ -1,0 +1,18 @@
+set visualbell
+set number
+set relativenumber
+set surround
+
+let mapleader = " "
+
+" Costum movement
+imap jj <ESC>
+set timeoutlen=1000
+
+map <leader>w <C-w>
+
+" KJump mappings
+" Provide simplified vim-easymotion functionality
+nmap <leader><leader>s :action KJumpAction<cr>
+nmap <leader><leader>w :action KJumpAction.Word0<cr>
+nmap <leader><leader>l :action KJumpAction.Line<cr>

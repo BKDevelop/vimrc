@@ -19,13 +19,12 @@ call plug#begin('~\AppData\Local\nvim\plugged')
 Plug 'blueshirts/darcula'
 
 " Visuals
-Plug 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim' " vim-airline slows down nvim-qt for some reason :( 
 
 " Utils
 Plug 'scrooloose/nerdtree' , { 'on':  'NERDTreeToggle' }
 Plug 'kien/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
-"Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'easymotion/vim-easymotion'
@@ -42,6 +41,7 @@ call plug#end()
 " Plugin specific key mappings:
 "   NERDTree
 nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>nf :NERDTreeFind<CR>
 nmap <leader>nc :NERDTree C:\\<CR>
 nmap <leader>ne :NERDTree E:\\<CR>
 nmap <leader>fed :tabe C:\Users\koehlerb\AppData\Local\nvim\init.vim<CR>
@@ -117,8 +117,6 @@ inoremap <F1> <ESC>:set invfullscreen<CR>a
 nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
 
-" Textmate holdouts
-
 " Formatting
 map <leader>q gqip
 
@@ -135,3 +133,7 @@ colorscheme darcula
 
 " Costum commands
 command Clean execute "%bd | e#"
+
+" Costum movement
+imap jj <ESC>
+map <leader>w <C-w>

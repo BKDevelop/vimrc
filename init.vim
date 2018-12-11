@@ -28,13 +28,23 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'mattn/emmet-vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/nerdcommenter'
 
 " Language Support
-Plug 'dzeban/vim-log-syntax'
-Plug 'jceb/vim-orgmode' 
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'scrooloose/nerdcommenter'
+Plug 'dzeban/vim-log-syntax', { 'for': 'log' }
+Plug 'jceb/vim-orgmode', { 'for': 'org' }
+Plug 'pangloss/vim-javascript', { 'for': 'js' }
+Plug 'leafgarland/typescript-vim', { 'for': 'ts' }
+Plug 'rust-lang/rust.vim', { 'for': 'rs' }
+
+" Syntax check and auto-completion
+Plug 'w0rp/ale' " linting
+Plug 'scrooloose/syntastic'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi', { 'for': 'py' }
+Plug 'carlitux/deoplete-ternjs', { 'for': 'js' }
+Plug 'mhartington/deoplete-typescript', { 'for': 'ts' }
+Plug 'sebastianmarkow/deoplete-rust', { 'for': 'rs' }
 
 call plug#end()
 
